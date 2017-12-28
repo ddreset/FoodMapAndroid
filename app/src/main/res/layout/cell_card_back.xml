@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main_fl_card_back"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:contentDescription="@null"
+        android:padding="16dp"
+        android:src="@drawable/rectangle_back"/>
+
+    <android.support.percent.PercentRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16dp">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            app:layout_heightPercent="50%"
+            android:orientation="vertical"
+            android:id="@+id/pics">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/storeimg"/>
+
+        </FrameLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            app:layout_heightPercent="50%"
+            app:layout_marginTopPercent="50%"
+            android:orientation="vertical"
+            android:id="@+id/info">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="25sp"
+                android:text="@string/card_back"
+                android:padding="10dp"
+                android:textColor="@android:color/white"
+                android:id="@+id/store_name"
+                android:layout_gravity="clip_horizontal"
+                android:gravity="center_horizontal" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:text="联系方式："
+                android:textColor="@android:color/white"
+                android:id="@+id/store_contact"
+                android:layout_gravity="clip_horizontal"
+                android:padding="5dp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:text="地址："
+                android:textColor="@android:color/white"
+                android:id="@+id/store_address"
+                android:padding="5dp" />
+        </LinearLayout>
+
+    </android.support.percent.PercentRelativeLayout>
+
+</FrameLayout>
